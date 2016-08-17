@@ -1,0 +1,4 @@
+/etc/gitconfig - global user
+~/.gitconfig - 특정유저
+.git/config - git 디렉토리에 있고 특정 저장소에만 적용
+

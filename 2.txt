@@ -1,0 +1,89 @@
+git add *.c
+git add LICENSE
+git commit -m 'initial project version'
+
+git clone repository url localName
+> checkout 
+
+Tracked - 관리대상
+ - Unmodified 수정X
+ - MOdified 수정O
+ - Staged 커밋
+UnTracked
+
+파일상태확인
+git status
+
+git status -s 간략하게 확인
+
+파일무시하기
+.gitignore에 정의
+
+자세하게 확인(staged 상태가 아닌 파일을 비교가능)
+git diff
+
+
+staging area에 넣은 파일의 변경부분을 보고 싶다
+git diff --staged
+
+>> git diff 명령은 마지막으로 커밋한 후에 수정한 것들 전부를 보여주지 않는다.
+>> unstaged 상태인 것들만 보여준다.
+
+staged 상태인 파일 확인
+git diff --cached
+
+git commit -v diff 메시지도 추가
+
+Staging Area 생략
+git commit -a -m 'added new benchmarks'
+
+Staging Area 에서 삭제
+git rm filename / -f 로 강제삭제 가능
+
+파일이름 변경
+git mv file_from file_to
+
+History 확인
+git log
+git log -p -2
+
+되돌리기
+git commit -m 'initial commit'
+git add forgotten_file
+git commit --amend
+
+> 3개 모두 하나의 커밋으로 기록, 2번째 커밋은 첫번째 커밋을 덮어쓴다
+
+파일상태를 Unstage로 변경
+git reset HEAD CONTRIBUTING.md
+
+
+리모트 저장소 확인
+git remote
+
+git remote -v 단축이름과 URL 확인가능
+
+리모트 저장소 추가
+git remote add 단축이름 url
+ex)git remote add pb https://github.com/paulboone/ticgit
+
+예를 들어 로컬 저장소에는 없지만 Paul의 저장소에 있는 것을 가져오려면 아래와 같이 실행
+git fetch pb
+
+git fetch remote-name
+
+git pull 명령은 clone한 서버에서 데잍터를 가져오고,
+그 데이터를 자동으로 현재 작업하는 코드와 merge
+
+git push 리모트저장소이름 브래내치이름
+> clone하면 보통 자동으로 origin 이름이 생성된다.
+
+git push origin master
+> master 브랜치를 origin 서버에 push
+
+리모트 저장소 살펴보기
+git remote show origin
+
+리모트저장소 이름 변경, 삭제
+git remote rename pb paul
+git remote rm paul
