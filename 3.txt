@@ -1,55 +1,55 @@
-ºê·±Ä¡°¡ °¡¸®Å°°í ÀÖ´Â È÷½ºÅä¸® Ãâ·Â
+ë¸ŒëŸ°ì¹˜ê°€ ê°€ë¦¬í‚¤ê³  ìžˆëŠ” ížˆìŠ¤í† ë¦¬ ì¶œë ¥
 git log --oneline --decorate --graph --all
 
-ºê·±Ä¡ ¸¸µé°í checkout ±îÁö ÇÑ¹ø¿¡
+ë¸ŒëŸ°ì¹˜ ë§Œë“¤ê³  checkout ê¹Œì§€ í•œë²ˆì—
 git checkout -b iss53
 
 merge
-1. ¸¶½ºÅÍ·Î ÀÌµ¿
+1. ë§ˆìŠ¤í„°ë¡œ ì´ë™
 > git checkout master
-2. merge ½ÇÇà
+2. merge ì‹¤í–‰
 git merge hotfix
 
-´õÀÌ»ó ÇÊ¿ä¾ø´Â ºê·£Ä¡»èÁ¦
+ë”ì´ìƒ í•„ìš”ì—†ëŠ” ë¸Œëžœì¹˜ì‚­ì œ
 git branch -d hotfix
 
-ºê¶õÄ¡ ¸ñ·Ï
+ë¸Œëž€ì¹˜ ëª©ë¡
 git branch 
 
-git branch -v > ºê·£Ä¡¸¶´Ù ¸¶Áö¸· Ä¿¹Ô ¸Þ½ÃÁöÃâ·Â
-git branch --merged / --no-merged ¸ÓÁöµÈ ºê·£Ä¡ÀÎÁö ¾Æ´ÑÁö ÇÊÅÍ¸µ
+git branch -v > ë¸Œëžœì¹˜ë§ˆë‹¤ ë§ˆì§€ë§‰ ì»¤ë°‹ ë©”ì‹œì§€ì¶œë ¥
+git branch --merged / --no-merged ë¨¸ì§€ëœ ë¸Œëžœì¹˜ì¸ì§€ ì•„ë‹Œì§€ í•„í„°ë§
 
-¸ÓÁö¾ÈÇÑ ºê·£Ä¡ °­Á¦»èÁ¦
+ë¨¸ì§€ì•ˆí•œ ë¸Œëžœì¹˜ ê°•ì œì‚­ì œ
 git branch -D tesing
 
 
-pushÇÏ±â
+pushí•˜ê¸°
 git push origin serverfix
 git push (remote) (branch)
 
 git fetch
-- ¼­¹ö¿¡´Â Á¸ÀçÇÏÁö¸¸ ·ÎÄÃ¿¡´Â ¾ÆÁ÷ ¾ø´Â µ¥ÀÌÅÍ¸¦ ¹Þ¾Æ¿Í¼­ ÀúÀå.
-- ¿öÅ· µð·ºÅÍ¸®ÀÇ ÆÄÀÏ ³»¿ë º¯°æX ±×´ë·Î ³²´Â´Ù.
-- ¼­¹ö·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ ÀúÀå, »ç¿ëÀÚ°¡ mereÇÏµµ·Ï ÁØºñ¸¸
+- ì„œë²„ì—ëŠ” ì¡´ìž¬í•˜ì§€ë§Œ ë¡œì»¬ì—ëŠ” ì•„ì§ ì—†ëŠ” ë°ì´í„°ë¥¼ ë°›ì•„ì™€ì„œ ì €ìž¥.
+- ì›Œí‚¹ ë””ë ‰í„°ë¦¬ì˜ íŒŒì¼ ë‚´ìš© ë³€ê²½X ê·¸ëŒ€ë¡œ ë‚¨ëŠ”ë‹¤.
+- ì„œë²„ë¡œë¶€í„° ë°ì´í„°ë¥¼ ê°€ì ¸ì™€ì„œ ì €ìž¥, ì‚¬ìš©ìžê°€ mereí•˜ë„ë¡ ì¤€ë¹„ë§Œ
 
-pull ¸í·ÉÀº ´ëºÎºÐ git fetch ¸í·ÉÀ» ½ÇÇàÇÏ°í ³ª¼­ ÀÚµ¿À¸·Î 
-git merge¸í·ÉÀ» ¼öÇàÇÏ´Â °Í »Ó.
-> ¼­¹ö·ÎºÎÅÍ µ¥ÀÌÅÍ¸¦ °¡Á®¿Í¼­ ÇöÀç ·ÎÄÃ ºê·£Ä¡¿Í ¼­¹öÀÇ ÃßÀû ºê·£Ä¡¸¦ merge
+pull ëª…ë ¹ì€ ëŒ€ë¶€ë¶„ git fetch ëª…ë ¹ì„ ì‹¤í–‰í•˜ê³  ë‚˜ì„œ ìžë™ìœ¼ë¡œ 
+git mergeëª…ë ¹ì„ ìˆ˜í–‰í•˜ëŠ” ê²ƒ ë¿.
+> ì„œë²„ë¡œë¶€í„° ë°ì´í„°ë¥¼ ê°€ì ¸ì™€ì„œ í˜„ìž¬ ë¡œì»¬ ë¸Œëžœì¹˜ì™€ ì„œë²„ì˜ ì¶”ì  ë¸Œëžœì¹˜ë¥¼ merge
 
-¸®¸ðÆ® ºê·£Ä¡ »èÁ¦
+ë¦¬ëª¨íŠ¸ ë¸Œëžœì¹˜ ì‚­ì œ
  git push orign --delete serverfix
- > Çù¾÷ÇÏ´Â µ¥ »ç¿ëÇß´ø ¸®¸ðÆ® ºê·£Ä¡ »èÁ¦
+ > í˜‘ì—…í•˜ëŠ” ë° ì‚¬ìš©í–ˆë˜ ë¦¬ëª¨íŠ¸ ë¸Œëžœì¹˜ ì‚­ì œ
 
 REBASE
 git checkout experiment
 git rebase master
- > REBASEÇÒ ºê·£Ä¡°¡ ÇÕÄ¥ ºê·£Ä¡°¡ °¡¸®Å°´Â Ä¿¹ÔÀ» °¡¸®Å°°ÔÇÏ°í ¾Æ±î ÀúÀåÇß´ø,
- º¯°æ»çÇ×À» Â÷·Ê´ë·Î Àû¿ë
+ > REBASEí•  ë¸Œëžœì¹˜ê°€ í•©ì¹  ë¸Œëžœì¹˜ê°€ ê°€ë¦¬í‚¤ëŠ” ì»¤ë°‹ì„ ê°€ë¦¬í‚¤ê²Œí•˜ê³  ì•„ê¹Œ ì €ìž¥í–ˆë˜,
+ ë³€ê²½ì‚¬í•­ì„ ì°¨ë¡€ëŒ€ë¡œ ì ìš©
 
 git checkout master
 git merge experiment
 
-Rebase°¡ Á»´õ ±ú²ýÇÑ È÷½ºÅä¸® ¸¸µç´Ù.
+Rebaseê°€ ì¢€ë” ê¹¨ë—í•œ ížˆìŠ¤í† ë¦¬ ë§Œë“ ë‹¤.
 
-ÀÌ¹Ì °ø°³ ÀúÀå¼Ò¿¡ pushÇÑ Ä¿¹ÔÀ» rebaseÇÏÁö ¸»¶ó
+ì´ë¯¸ ê³µê°œ ì €ìž¥ì†Œì— pushí•œ ì»¤ë°‹ì„ rebaseí•˜ì§€ ë§ë¼
 

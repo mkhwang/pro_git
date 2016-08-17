@@ -5,85 +5,85 @@ git commit -m 'initial project version'
 git clone repository url localName
 > checkout 
 
-Tracked - °ü¸®´ë»ó
- - Unmodified ¼öÁ¤X
- - MOdified ¼öÁ¤O
- - Staged Ä¿¹Ô
+Tracked - ê´€ë¦¬ëŒ€ìƒ
+ - Unmodified ìˆ˜ì •X
+ - MOdified ìˆ˜ì •O
+ - Staged ì»¤ë°‹
 UnTracked
 
-ÆÄÀÏ»óÅÂÈ®ÀÎ
+íŒŒì¼ìƒíƒœí™•ì¸
 git status
 
-git status -s °£·«ÇÏ°Ô È®ÀÎ
+git status -s ê°„ëµí•˜ê²Œ í™•ì¸
 
-ÆÄÀÏ¹«½ÃÇÏ±â
-.gitignore¿¡ Á¤ÀÇ
+íŒŒì¼ë¬´ì‹œí•˜ê¸°
+.gitignoreì— ì •ì˜
 
-ÀÚ¼¼ÇÏ°Ô È®ÀÎ(staged »óÅÂ°¡ ¾Æ´Ñ ÆÄÀÏÀ» ºñ±³°¡´É)
+ìì„¸í•˜ê²Œ í™•ì¸(staged ìƒíƒœê°€ ì•„ë‹Œ íŒŒì¼ì„ ë¹„êµê°€ëŠ¥)
 git diff
 
 
-staging area¿¡ ³ÖÀº ÆÄÀÏÀÇ º¯°æºÎºĞÀ» º¸°í ½Í´Ù
+staging areaì— ë„£ì€ íŒŒì¼ì˜ ë³€ê²½ë¶€ë¶„ì„ ë³´ê³  ì‹¶ë‹¤
 git diff --staged
 
->> git diff ¸í·ÉÀº ¸¶Áö¸·À¸·Î Ä¿¹ÔÇÑ ÈÄ¿¡ ¼öÁ¤ÇÑ °Íµé ÀüºÎ¸¦ º¸¿©ÁÖÁö ¾Ê´Â´Ù.
->> unstaged »óÅÂÀÎ °Íµé¸¸ º¸¿©ÁØ´Ù.
+>> git diff ëª…ë ¹ì€ ë§ˆì§€ë§‰ìœ¼ë¡œ ì»¤ë°‹í•œ í›„ì— ìˆ˜ì •í•œ ê²ƒë“¤ ì „ë¶€ë¥¼ ë³´ì—¬ì£¼ì§€ ì•ŠëŠ”ë‹¤.
+>> unstaged ìƒíƒœì¸ ê²ƒë“¤ë§Œ ë³´ì—¬ì¤€ë‹¤.
 
-staged »óÅÂÀÎ ÆÄÀÏ È®ÀÎ
+staged ìƒíƒœì¸ íŒŒì¼ í™•ì¸
 git diff --cached
 
-git commit -v diff ¸Ş½ÃÁöµµ Ãß°¡
+git commit -v diff ë©”ì‹œì§€ë„ ì¶”ê°€
 
-Staging Area »ı·«
+Staging Area ìƒëµ
 git commit -a -m 'added new benchmarks'
 
-Staging Area ¿¡¼­ »èÁ¦
-git rm filename / -f ·Î °­Á¦»èÁ¦ °¡´É
+Staging Area ì—ì„œ ì‚­ì œ
+git rm filename / -f ë¡œ ê°•ì œì‚­ì œ ê°€ëŠ¥
 
-ÆÄÀÏÀÌ¸§ º¯°æ
+íŒŒì¼ì´ë¦„ ë³€ê²½
 git mv file_from file_to
 
-History È®ÀÎ
+History í™•ì¸
 git log
 git log -p -2
 
-µÇµ¹¸®±â
+ë˜ëŒë¦¬ê¸°
 git commit -m 'initial commit'
 git add forgotten_file
 git commit --amend
 
-> 3°³ ¸ğµÎ ÇÏ³ªÀÇ Ä¿¹ÔÀ¸·Î ±â·Ï, 2¹øÂ° Ä¿¹ÔÀº Ã¹¹øÂ° Ä¿¹ÔÀ» µ¤¾î¾´´Ù
+> 3ê°œ ëª¨ë‘ í•˜ë‚˜ì˜ ì»¤ë°‹ìœ¼ë¡œ ê¸°ë¡, 2ë²ˆì§¸ ì»¤ë°‹ì€ ì²«ë²ˆì§¸ ì»¤ë°‹ì„ ë®ì–´ì“´ë‹¤
 
-ÆÄÀÏ»óÅÂ¸¦ Unstage·Î º¯°æ
+íŒŒì¼ìƒíƒœë¥¼ Unstageë¡œ ë³€ê²½
 git reset HEAD CONTRIBUTING.md
 
 
-¸®¸ğÆ® ÀúÀå¼Ò È®ÀÎ
+ë¦¬ëª¨íŠ¸ ì €ì¥ì†Œ í™•ì¸
 git remote
 
-git remote -v ´ÜÃàÀÌ¸§°ú URL È®ÀÎ°¡´É
+git remote -v ë‹¨ì¶•ì´ë¦„ê³¼ URL í™•ì¸ê°€ëŠ¥
 
-¸®¸ğÆ® ÀúÀå¼Ò Ãß°¡
-git remote add ´ÜÃàÀÌ¸§ url
+ë¦¬ëª¨íŠ¸ ì €ì¥ì†Œ ì¶”ê°€
+git remote add ë‹¨ì¶•ì´ë¦„ url
 ex)git remote add pb https://github.com/paulboone/ticgit
 
-¿¹¸¦ µé¾î ·ÎÄÃ ÀúÀå¼Ò¿¡´Â ¾øÁö¸¸ PaulÀÇ ÀúÀå¼Ò¿¡ ÀÖ´Â °ÍÀ» °¡Á®¿À·Á¸é ¾Æ·¡¿Í °°ÀÌ ½ÇÇà
+ì˜ˆë¥¼ ë“¤ì–´ ë¡œì»¬ ì €ì¥ì†Œì—ëŠ” ì—†ì§€ë§Œ Paulì˜ ì €ì¥ì†Œì— ìˆëŠ” ê²ƒì„ ê°€ì ¸ì˜¤ë ¤ë©´ ì•„ë˜ì™€ ê°™ì´ ì‹¤í–‰
 git fetch pb
 
 git fetch remote-name
 
-git pull ¸í·ÉÀº cloneÇÑ ¼­¹ö¿¡¼­ µ¥ŸæÅÍ¸¦ °¡Á®¿À°í,
-±× µ¥ÀÌÅÍ¸¦ ÀÚµ¿À¸·Î ÇöÀç ÀÛ¾÷ÇÏ´Â ÄÚµå¿Í merge
+git pull ëª…ë ¹ì€ cloneí•œ ì„œë²„ì—ì„œ ë°ìí„°ë¥¼ ê°€ì ¸ì˜¤ê³ ,
+ê·¸ ë°ì´í„°ë¥¼ ìë™ìœ¼ë¡œ í˜„ì¬ ì‘ì—…í•˜ëŠ” ì½”ë“œì™€ merge
 
-git push ¸®¸ğÆ®ÀúÀå¼ÒÀÌ¸§ ºê·¡³»Ä¡ÀÌ¸§
-> cloneÇÏ¸é º¸Åë ÀÚµ¿À¸·Î origin ÀÌ¸§ÀÌ »ı¼ºµÈ´Ù.
+git push ë¦¬ëª¨íŠ¸ì €ì¥ì†Œì´ë¦„ ë¸Œë˜ë‚´ì¹˜ì´ë¦„
+> cloneí•˜ë©´ ë³´í†µ ìë™ìœ¼ë¡œ origin ì´ë¦„ì´ ìƒì„±ëœë‹¤.
 
 git push origin master
-> master ºê·£Ä¡¸¦ origin ¼­¹ö¿¡ push
+> master ë¸Œëœì¹˜ë¥¼ origin ì„œë²„ì— push
 
-¸®¸ğÆ® ÀúÀå¼Ò »ìÆìº¸±â
+ë¦¬ëª¨íŠ¸ ì €ì¥ì†Œ ì‚´í´ë³´ê¸°
 git remote show origin
 
-¸®¸ğÆ®ÀúÀå¼Ò ÀÌ¸§ º¯°æ, »èÁ¦
+ë¦¬ëª¨íŠ¸ì €ì¥ì†Œ ì´ë¦„ ë³€ê²½, ì‚­ì œ
 git remote rename pb paul
 git remote rm paul

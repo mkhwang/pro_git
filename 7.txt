@@ -1,61 +1,61 @@
-´ëÈ­Çü ¸í·É
+ëŒ€í™”í˜• ëª…ë ¹
 git add -i or -interactive
 
-ÇÁ·ÒÇÁÆ®°¡ What now> ·Î ¹Ù²ñ
+í”„ë¡¬í”„íŠ¸ê°€ What now> ë¡œ ë°”ë€œ
 
-2, u ÀÔ·Â½Ã Staging area¿¡ Ãß°¡ÇÒ¼öÀÖ´Â ÆÄÀÏº¸¿©ÁÜ
+2, u ìž…ë ¥ì‹œ Staging areaì— ì¶”ê°€í• ìˆ˜ìžˆëŠ” íŒŒì¼ë³´ì—¬ì¤Œ
 
-½ºÅ×ÀÌÁö area¿¡ ¿Ã·Á³õ°í ¾ÆÁ÷ Ä¿¹ÔÇÏÁö ¾Ê°í
-³ªÁß¿¡ ´Ù½Ã µ¹¾Æ¿Í ÀÛ¾÷À» ÇÏ°í½Í´Ù
+ìŠ¤í…Œì´ì§€ areaì— ì˜¬ë ¤ë†“ê³  ì•„ì§ ì»¤ë°‹í•˜ì§€ ì•Šê³ 
+ë‚˜ì¤‘ì— ë‹¤ì‹œ ëŒì•„ì™€ ìž‘ì—…ì„ í•˜ê³ ì‹¶ë‹¤
 git stash / git stash save
 
-git stash list ·Î ¸®½ÃÆ® È®ÀÎ
+git stash list ë¡œ ë¦¬ì‹œíŠ¸ í™•ì¸
 
-git stash apply ·Î Àû¿ë°¡´É --index¿É¼ÇÀ» ÁÖ¾î¼­ staged »óÅÂ±îÁö Àû¿ë
+git stash apply ë¡œ ì ìš©ê°€ëŠ¥ --indexì˜µì…˜ì„ ì£¼ì–´ì„œ staged ìƒíƒœê¹Œì§€ ì ìš©
 
-apply ¿É¼ÇÀº ´Ü¼øÈ÷ stash¸¦ Àû¿ëÇÏ´Â °Í »Ó, stash´Â ¿©ÀüÈ÷ ½ºÅÃ¿¡ ³²¾ÆÀÖ´Ù.
+apply ì˜µì…˜ì€ ë‹¨ìˆœížˆ stashë¥¼ ì ìš©í•˜ëŠ” ê²ƒ ë¿, stashëŠ” ì—¬ì „ížˆ ìŠ¤íƒì— ë‚¨ì•„ìžˆë‹¤.
 
-git stash drop ¸í·ÉÀ» »ç¿ëÇÏ¿© ÇØ´ç stash ¸¦ Á¦°Å
+git stash drop ëª…ë ¹ì„ ì‚¬ìš©í•˜ì—¬ í•´ë‹¹ stash ë¥¼ ì œê±°
 
-stash ÇÏÁö ¾Ê°í ÆÄÀÏÀ» Ä¡¿ö¹ö¸®°í ½ÍÀ» ¶§
+stash í•˜ì§€ ì•Šê³  íŒŒì¼ì„ ì¹˜ì›Œë²„ë¦¬ê³  ì‹¶ì„ ë•Œ
 
 git clean -f -d
 
-*RESET ¸íÈ®ÇÏ°Ô ¾Ë°í°¡±â
-¼¼ °³ÀÇ Æ®¸®
-- Æ®¸® => ½ÇÁ¦·Î´Â ÆÄÀÏÀÇ ¹­À½.
-HEAD : ¸¶Áö¸· Ä¿¹Ô ½º³À¼¦, ´ÙÀ½ Ä¿¹ÔÀÇ ºÎ¸ð Ä¿¹Ô
-index : ´ÙÀ½¿¡ Ä¿¹ÔÇÒ ½º³À¼¦
-¿öÅ· µð·ºÅÍ¸® : »÷µå¹Ú½º
+*RESET ëª…í™•í•˜ê²Œ ì•Œê³ ê°€ê¸°
+ì„¸ ê°œì˜ íŠ¸ë¦¬
+- íŠ¸ë¦¬ => ì‹¤ì œë¡œëŠ” íŒŒì¼ì˜ ë¬¶ìŒ.
+HEAD : ë§ˆì§€ë§‰ ì»¤ë°‹ ìŠ¤ëƒ…ìƒ·, ë‹¤ìŒ ì»¤ë°‹ì˜ ë¶€ëª¨ ì»¤ë°‹
+index : ë‹¤ìŒì— ì»¤ë°‹í•  ìŠ¤ëƒ…ìƒ·
+ì›Œí‚¹ ë””ë ‰í„°ë¦¬ : ìƒŒë“œë°•ìŠ¤
 
 HEAD 
-- ÇöÀçºê·£Ä¡¸¦ °¡¸®Å°´Â Æ÷ÀÎÅÍ, ºê·£Ä¡´Â ºê·£Ä¡¿¡ ´ã±ä Ä¿¹ÔÁß ¸¶Áö¸· Ä¿¹ÔÀ» °¡¸®Å´
-- HEAD´Â ¸¶Áö¸· Ä¿¹ÔÀÇ ½º³À¼¦.
+- í˜„ìž¬ë¸Œëžœì¹˜ë¥¼ ê°€ë¦¬í‚¤ëŠ” í¬ì¸í„°, ë¸Œëžœì¹˜ëŠ” ë¸Œëžœì¹˜ì— ë‹´ê¸´ ì»¤ë°‹ì¤‘ ë§ˆì§€ë§‰ ì»¤ë°‹ì„ ê°€ë¦¬í‚´
+- HEADëŠ” ë§ˆì§€ë§‰ ì»¤ë°‹ì˜ ìŠ¤ëƒ…ìƒ·.
 
 INDEX
- - ¹Ù·Î ´ÙÀ½¿¡ Ä¿¹ÔÇÒ °Íµé.
- Staging Area´Â »ç¿ëÀÚ°¡ git commit ¸í·ÉÀ» ½ÇÇàÇßÀ» ¶§ gitÀÌ Ã³¸®ÇÒ °ÍµéÀÌ ÀÖ´Â°÷
- - index´Â ¿öÅ·µð·ºÅä¸®¿¡¼­ ¸¶Áö¸·À¸·Î checkoutÇÑ ºê·£Ä¡ÀÇ ÆÄÀÏ ¸ñ·Ï°ú ³»¿ëÀ¸·Î Ã¤¿öÁü
- - ÀÌÈÄ ÆÄÀÏÀ» º¯°æÇÏ°í, º¯°æÇÑ ³»¿ëÀ¸·Î index¸¦ ¾÷µ¥ÀÌÆ®ÇÒ ¼ö ÀÖ´Ù.
- - ¾÷µ¥ÀÌÆ®ÇÏ°í git commit ¸í·ÉÀ» ½ÇÇàÇÏ¸é index´Â »õ Ä¿¹ÔÀ¸·Î º¯È¯
+ - ë°”ë¡œ ë‹¤ìŒì— ì»¤ë°‹í•  ê²ƒë“¤.
+ Staging AreaëŠ” ì‚¬ìš©ìžê°€ git commit ëª…ë ¹ì„ ì‹¤í–‰í–ˆì„ ë•Œ gitì´ ì²˜ë¦¬í•  ê²ƒë“¤ì´ ìžˆëŠ”ê³³
+ - indexëŠ” ì›Œí‚¹ë””ë ‰í† ë¦¬ì—ì„œ ë§ˆì§€ë§‰ìœ¼ë¡œ checkoutí•œ ë¸Œëžœì¹˜ì˜ íŒŒì¼ ëª©ë¡ê³¼ ë‚´ìš©ìœ¼ë¡œ ì±„ì›Œì§
+ - ì´í›„ íŒŒì¼ì„ ë³€ê²½í•˜ê³ , ë³€ê²½í•œ ë‚´ìš©ìœ¼ë¡œ indexë¥¼ ì—…ë°ì´íŠ¸í•  ìˆ˜ ìžˆë‹¤.
+ - ì—…ë°ì´íŠ¸í•˜ê³  git commit ëª…ë ¹ì„ ì‹¤í–‰í•˜ë©´ indexëŠ” ìƒˆ ì»¤ë°‹ìœ¼ë¡œ ë³€í™˜
 
-¿öÅ·µð·ºÅÍ¸®
- - À§ µÎ Æ®¸®´Â ÆÄÀÏ°ú ³»¿ëÀ» È¿À²ÀûÀÎ ÇüÅÂ·Î .git µð·ºÅÍ¸®¿¡ ÀúÀå -> ¾Ë¾Æº¸±â¾î·Á¿ò
- - ¿öÅ· µð·ºÅÍ¸®´Â ½ÇÁ¦ ÆÄÀÏ·Î Á¸Àç. »ç¿ëÀÚ°¡ ÆíÁýÇÏ±â ¼ö¿ùÇÏ´Ù. ¿öÅ·µð·ºÅÍ¸®´Â »÷µå¹Ú½º·Î »ý°¢ÇÏÀÚ.
- - Ä¿¹ÔÀü¿¡´Â index(staing area)¿¡ ¿Ã·Á³õ°í ¾ó¸¶µçÁö º¯°æ°¡´É
+ì›Œí‚¹ë””ë ‰í„°ë¦¬
+ - ìœ„ ë‘ íŠ¸ë¦¬ëŠ” íŒŒì¼ê³¼ ë‚´ìš©ì„ íš¨ìœ¨ì ì¸ í˜•íƒœë¡œ .git ë””ë ‰í„°ë¦¬ì— ì €ìž¥ -> ì•Œì•„ë³´ê¸°ì–´ë ¤ì›€
+ - ì›Œí‚¹ ë””ë ‰í„°ë¦¬ëŠ” ì‹¤ì œ íŒŒì¼ë¡œ ì¡´ìž¬. ì‚¬ìš©ìžê°€ íŽ¸ì§‘í•˜ê¸° ìˆ˜ì›”í•˜ë‹¤. ì›Œí‚¹ë””ë ‰í„°ë¦¬ëŠ” ìƒŒë“œë°•ìŠ¤ë¡œ ìƒê°í•˜ìž.
+ - ì»¤ë°‹ì „ì—ëŠ” index(staing area)ì— ì˜¬ë ¤ë†“ê³  ì–¼ë§ˆë“ ì§€ ë³€ê²½ê°€ëŠ¥
 
 * Checkout
- - git checkout branch ¸í·ÉÀº git reset --hard branch ¸í·É°ú ºñ½ÁÇÏ°Ô 
- branch ½º³À¼¦À» ±âÁØÀ¸·Î ¼¼Æ®¸®¸¦ Á¶ÀÛ.
+ - git checkout branch ëª…ë ¹ì€ git reset --hard branch ëª…ë ¹ê³¼ ë¹„ìŠ·í•˜ê²Œ 
+ branch ìŠ¤ëƒ…ìƒ·ì„ ê¸°ì¤€ìœ¼ë¡œ ì„¸íŠ¸ë¦¬ë¥¼ ì¡°ìž‘.
 
 
- git merge --abort ¸í·ÉÀ¸·Î °£´ÜÈ÷ merge ÇÏ±â ÀüÀ¸·Î µÇµ¹¸°´Ù.
+ git merge --abort ëª…ë ¹ìœ¼ë¡œ ê°„ë‹¨ížˆ merge í•˜ê¸° ì „ìœ¼ë¡œ ë˜ëŒë¦°ë‹¤.
 
  -Xignore-all-space
  -Xignore-space-change
-¸ÓÁö½Ã °ø¹éÁ¦°Å ¿É¼Ç
+ë¨¸ì§€ì‹œ ê³µë°±ì œê±° ì˜µì…˜
 
 
-Ä¿¹Ô µÇµ¹¸®±â
+ì»¤ë°‹ ë˜ëŒë¦¬ê¸°
 git revert -m 1 HEAD
  

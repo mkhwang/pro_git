@@ -1,16 +1,16 @@
-´ë±Ô¸ğ °ø°³ ÇÁ·ÎÁ§Æ®¿Í ÀÌ¸ŞÀÏÀ» ÅëÇÑ °ü¸®
+ëŒ€ê·œëª¨ ê³µê°œ í”„ë¡œì íŠ¸ì™€ ì´ë©”ì¼ì„ í†µí•œ ê´€ë¦¬
 git checkout -b topicA
 work
 git commit
 work
 gir commit
 
-git format-patch ¸í·ÉÀ¸·Î ¸ŞÀÏ¸µ ¸®½ºÆ®¿¡ º¸³¾ mboxÇü½ÄÀÇ ÆÄÀÏ»ı¼º.
+git format-patch ëª…ë ¹ìœ¼ë¡œ ë©”ì¼ë§ ë¦¬ìŠ¤íŠ¸ì— ë³´ë‚¼ mboxí˜•ì‹ì˜ íŒŒì¼ìƒì„±.
 git format-patch -M orign/master
-> º¯°æµÈ ÆÄÀÏ¤· ¤ÓÀÖ´ÂÁö »ìÆìº¸¶ó´Â ¿É¼Ç
+> ë³€ê²½ëœ íŒŒì¼ã…‡ ã…£ìˆëŠ”ì§€ ì‚´í´ë³´ë¼ëŠ” ì˜µì…˜
 
-IMAP ÇÁ·ÎÅäÄİÀÌ¿ë
-~/.gitconfig ÆÄÀÏ¿¡¼­
+IMAP í”„ë¡œí† ì½œì´ìš©
+~/.gitconfig íŒŒì¼ì—ì„œ
 
 [imap]
  folder="[Gmail]/Drafts"
@@ -20,20 +20,20 @@ IMAP ÇÁ·ÎÅäÄİÀÌ¿ë
  port=993
  sslverify = fase
 
-git imap-send ¸í·ÉÀ¸·Î PatchÆÄÀÏ¤·¸£ IAMP¼­¹öÀÇ DRAFTÆú´õ¿¡ º¸³¾¼öÀÖ´Ù.
+git imap-send ëª…ë ¹ìœ¼ë¡œ PatchíŒŒì¼ã…‡ë¥´ IAMPì„œë²„ì˜ DRAFTí´ë”ì— ë³´ë‚¼ìˆ˜ìˆë‹¤.
 
 cat *.patch | git imap-send
 
 
-ÀÌ¸ŞÀÏ·Î ¹ŞÀº patch ÆÄÀÏ Àû¿ë
+ì´ë©”ì¼ë¡œ ë°›ì€ patch íŒŒì¼ ì ìš©
 
-ºôµå³Ñ¹ö´Ş±â
+ë¹Œë“œë„˜ë²„ë‹¬ê¸°
 
 git describe master
 
 git describe -a -s 
 
-¸±¸®Áî ÁØºñÇÏ±â
+ë¦´ë¦¬ì¦ˆ ì¤€ë¹„í•˜ê¸°
 git archive master --perfix='project/' | gzip > 'git describe master'.tar.gz
 
 git archive master --perfix='project/' --format=zip > 'git describe master'.zip
