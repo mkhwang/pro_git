@@ -1,0 +1,25 @@
+git mergetool 명령은 외부 merge helper를 실행해줌.
+머지중 문제생겻을때 사용
+
+git fetch 명령은 로컬 데이터베이스에 있는 것을 뺀 리모트 저장소의 모든것을 가져옴
+
+git pull 명령은 git fetch와 git merge 명령ㅇ르 순ㅅ너대로 실행한 것
+리모트에서 fetch하고 즉시 현 브랜치로 merge 시도
+
+git push 명령은 리모트에는 없지만 로컬에는 있는 커밋을 계산하고 나서 그 차이만큼 push
+
+git archive 명령은 프로젝트 스냅샷을 아카이프 파일로 만들어줌
+
+git submodule 명령은 저장소 안에 다른 저장소 관리하는 데사용
+
+submodule 명령에 있는 add, update, sync 등 하위 명령어로 서브묘듈 관리
+
+git show git 개체를 사람이 읽을 수 있도록 요약해서 보여줌
+
+git shorlog
+
+git describe
+
+git blame 파일의 각 라인을 누가 마지막으로 수정했는지 보여줌
+
+git cherry-pick 커밋 하나만 가져올 때 사용
