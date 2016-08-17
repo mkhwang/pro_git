@@ -1,0 +1,40 @@
+대규모 공개 프로젝트와 이메일을 통한 관리
+git checkout -b topicA
+work
+git commit
+work
+gir commit
+
+git format-patch 명령으로 메일링 리스트에 보낼 mbox형식의 파일생성.
+git format-patch -M orign/master
+> 변경된 파일ㅇ ㅣ있는지 살펴보라는 옵션
+
+IMAP 프로토콜이용
+~/.gitconfig 파일에서
+
+[imap]
+ folder="[Gmail]/Drafts"
+ host=imaps://imap.gamil.com
+ user=user@gmail.com
+ pass=passwd
+ port=993
+ sslverify = fase
+
+git imap-send 명령으로 Patch파일ㅇ르 IAMP서버의 DRAFT폴더에 보낼수있다.
+
+cat *.patch | git imap-send
+
+
+이메일로 받은 patch 파일 적용
+
+빌드넘버달기
+
+git describe master
+
+git describe -a -s 
+
+릴리즈 준비하기
+git archive master --perfix='project/' | gzip > 'git describe master'.tar.gz
+
+git archive master --perfix='project/' --format=zip > 'git describe master'.zip
+

@@ -1,0 +1,90 @@
+git 서버설치
+1. 프로토콜 ssh가 좋다 9418 열어두자
+> 익명접속 안되니 조심
+
+일단 Bare 저장소를 만들어야한다. > 워킹디렉터리가 없는 저장소
+
+--bare옵션 주고 clone하면 새로운 bare저장소가 만들어짐
+
+git clone --bare my_projecct myproject.git
+비슷하다 cp -Rf my_project/.git my_project.git
+
+서버에 Bare 저장소 넣기
+
+git 저장소를 /opt/git에 저장.
+
+scp -r my_project.git user@git.example.com:/opt/git
+
+유저가 /opt/git 디렉터리에 일기권한이 있어ㅑㅇ함
+
+git clone user@git.example.com:/opt/git/my_project.git
+
+쓰기 권한 있으면 바로 push 가능
+
+ssh user@git.example.com
+cd /opt/git/my_project.git
+git init --bare --ashared 옵션 자동으로 그룹 쓰기권한추가
+
+동료와 함께 개발할 때 필요한것. 서버 + bare 저장소
+
+서버마다 git이라는 계정을 하나 씩 만들어. 쓰기권한이 필요한 
+
+사용자의 ssh 공개키를 모아서 git 계정의 ~/.ssh/authorized_keys파일에 입력
+
+공개키 만들기
+1. cd ~/.ssh
+ls
+> authorized_+key2 id_dsa knwon_hosts
+config id_dsa.pub
+
+.pub -> 공개키, 나머지 개인키
+.ssh 디렉터리도 없으면 ssh-keygen이라는 프로그램으로 키 생성
+.ssh/id_rsa 키를 저장하고 싶은 디렉터리에 입력하고 암호를 두번 입력
+.pub파일의 내용복사해서 이메일을 보내기만함녀 된다.
+
+서버에서 git 사용자 만들고
+
+mkdir .ssh %% chmod 700 .ssh
+touch .ssh/autorized_keys && chmod 600 .ssh/authorized_keys
+
+파일에 공개키 추가해야 접근가능함.
+
+cat /tmp/id_rsa.john.pub >> ~/.ssh/autorized_keys
+
+#server
+cd /opt/git
+mkdir project.git
+cd project.git
+git init --bare
+
+
+#client
+cd mproject
+git init
+git add *
+git commit -m 'initial commit'
+git remote add origin git@gitserver:/opt/git/project.git
+git push origin master
+
+#other client
+git clone git@gitserver:/opt/git/project.git
+cd proejct
+vim README
+git commit -am 'fix for the README ilfe'
+git push origin master
+
+
+깃 데몬
+git daemon --reuseaddr --base-path=/opt/gint /opt/git
+
+/etc/event.d/local_git_daemon
+
+start on startup
+stop on shutdown
+exec /usr/bin/git daemon \ --user=git --goruop=git \ --reuseraddr \ 
+--base-path=/opt/git/ \ 
+/opt/git
+respawn
+
+initctl start local-git-daemon
+
