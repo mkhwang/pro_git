@@ -23,3 +23,12 @@ git describe
 git blame 파일의 각 라인을 누가 마지막으로 수정했는지 보여줌
 
 git cherry-pick 커밋 하나만 가져올 때 사용
+
+# maven test 스킵 
+방법 #1 : 메이븐 빌드 명령어 추가
+mvn -Dmaven.test.skip=true package
+
+ 
+ <properties>
+	  <maven.test.skip>true</maven.test.skip>
+ </properties>
