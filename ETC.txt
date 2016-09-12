@@ -32,3 +32,15 @@ mvn -Dmaven.test.skip=true package
  <properties>
 	  <maven.test.skip>true</maven.test.skip>
  </properties>
+
+
+ 3.2.1 Add pre-build step
+
+먼저 Pre-build 단계에서 Goals and options에 다음 Maven Goal들을 추가합니다. 
+
+pom.xml 수정없이 단지 Goals을 입력하기만 하면 maven 서버에서 필요한 파일을 가져와서 빌드를 해줍니다. Maven을 사랑할 수 밖에 없네요.
+
+
+>pmd:pmd pmd:cpd findbugs:findbugs checkstyle:checkstyle
+
+아래 그림은 현재 저가 사용하고 Pre-build 단계의 골의 예제를 보여 줍니다. 
