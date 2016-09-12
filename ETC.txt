@@ -40,7 +40,32 @@ mvn -Dmaven.test.skip=true package
 
 pom.xml 수정없이 단지 Goals을 입력하기만 하면 maven 서버에서 필요한 파일을 가져와서 빌드를 해줍니다. Maven을 사랑할 수 밖에 없네요.
 
+<reporting>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<version>3.2</version>
+			<configuration>
+				<linkXref>true</linkXref>
+				<rulesets>
+					<ruleset>file:///${project.basedir}/my-pmd-ruleset.xml</ruleset>
+				</rulesets>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>cobertura-maven-plugin</artifactId>
+			<version>2.6</version>
+		</plugin>
+	</plugins>
+</reporting>
+
 
 >pmd:pmd pmd:cpd findbugs:findbugs checkstyle:checkstyle
 
+mvn clean install -Dmaven.test.skip=true pmd:pmd pmd:cpd findbugs:findbugs checkstyle:checkstyle
+
 아래 그림은 현재 저가 사용하고 Pre-build 단계의 골의 예제를 보여 줍니다. 
+
+
